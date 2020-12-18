@@ -133,11 +133,51 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">W10 << <a href='W10.html'>Previous</a> <a href='test 試推.html'>Next</a> >> test 試推<br /><h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
-<br />W10 << <a href='W10.html'>Previous</a> <a href='test 試推.html'>Next</a> >> test 試推</div>
+    <div id="tipue_search_content">CH5 << <a href='CH5.html'>Previous</a> <a href='43頁英文版.html'>Next</a> >> 43頁英文版<br /><h1>43頁 中英文版</h1>
+<p id="N10686" lang=""><span>在本課程中，我們將介紹主板的用途和功能。我們還將介紹中央處理器（CPU）和為CPU提供專門功能的各種技術，例如虛擬化，超線程和多核處理器。最後，我們將介紹可用的各種CPU冷卻方法，例如主動和被動散熱器以及液體冷卻。</span></p>
+<p id="N10689" lang=""><span><span>主板是計算機的基礎。</span><span>主板就像一個街區，公交車就像街道。</span><span>這些組件就像城市中的建築物，因此，如果您要從一棟建築物轉到另一棟建築物（或者在我們的情況下，如果我們希望信息從一個組件流向另一組件），則它必須穿越公交車（街道） ）。</span><span>總線是物理上將主板的各個組件彼此連接的總線，允許信息流入和流出各個計算機組件。</span><span>主板具有各種形狀，大小和佈局。</span><span>主板的特定形狀，大小和佈局稱為其外形尺寸。</span><span>主板是最重要的計算機組件之一，因為其他所有組件都插入主板中，</span><span>插入專用插槽（例如CPU），擴展槽（用於各種擴展卡）或連接器（例如SATA存儲設備和音頻輸入/輸出）中。</span><span>主板確實是計算機中所有組件的主要集合點。</span></span></p>
+<div class="imagewrap"><span class="image"><img alt="主板的照片。" class="popimg" id="_i_0" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH05/webcontent/PCH05/image1.png" title="主板的照片。"/></span><span class="caption" lang=""><span><span>母板。</span><span>照片由</span></span><a href="https://flic.kr/p/tyfRP" id="_i_1" lang="" target="_blank"><span><span>John Bullas</span></span></a><span><span>根據CC-BY-NC-ND許可使用<span> </span></span><span>。</span></span></span></div>
+<p id="N10699" lang=""><span><span>在開始討論主板本身之前，我們希望對可以連接到主板的各種組件有基本的了解。</span><span>在以後的課程中，我們將詳細介紹這些組件中的每一個，但讓我們看一下主板上的一些關鍵組件。</span></span></p>
+<div class="imagewrap"><span class="image"><img class="popimg" id="_i_2" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH05/webcontent/PCH05/image2.jpeg"/></span><span class="caption" lang=""><span><span>主板圖。</span><span>版權所有：</span></span><a href="http://www.123rf.com/profile_hipspeeds" id="_i_3" lang="" target="_blank"><span><span>hipspeeds / 123RF股票照片</span></span></a></span></div>
+<p id="N106A6" lang=""><span><span>查看上面的主板圖，其中標識了特定的組件。</span><span>讓我們更仔細地檢查每個組件：</span></span></p>
+<table align="center" cellspacing="0" class="wbtable" lang="">
+<tbody>
+<tr class="e">
+<td lang=""><span><span>組件名稱</span></span></td>
+<td lang=""><span><span>功能</span></span></td>
+</tr>
+<tr>
+<td lang=""><span><span>PCI擴充插槽</span></span></td>
+<td lang=""><span><span>這些使我們能夠為計算機添加功能，例如額外的USB端口，新的聲卡，調製解調器或網卡等。</span><span>這是一個通用卡插槽，所有製造商都可以在使用通用規範構建卡時使用。</span></span></td>
+</tr>
+<tr class="e">
+<td lang=""><span><span>PCIe x1（PCI Express大小1）插槽</span></span></td>
+<td lang=""><span><span>該特定的主板具有其中三個插槽，但是根據其特定的外形尺寸，不同的主闆對此有所不同。</span><span>這些是較新的插槽，比舊的PCI插槽快得多。</span><span>PCIe代表PCI Express，x1表示存在一個專用的串行數據連接（通道）。</span><span>PCIe具有多種尺寸，例如x1，x4，x8和x16。</span></span></td>
+</tr>
+<tr>
+<td lang=""><span><span>PCIe x16（PCI Express尺寸16）插槽</span></span></td>
+<td lang=""><span><span>這些是較新的插槽，比舊的PCI插槽快得多。</span><span>PCIe代表PCI Express，x16表示有16個串行通道。</span><span>PCIe具有多種尺寸，例如x1，x4，x8和x16。</span></span></td>
+</tr>
+<tr class="e">
+<td lang=""><span><span>後置輸入/輸出集群</span></span></td>
+<td lang=""><span><span>每個主板都可以提供專用的集成功能，例如網卡，聲卡，視頻卡以及各種輸入/輸出端口，這些功能都“聚集”在板上。</span><span>這些組件已焊接到主板上，因此無法更改。</span></span></td>
+</tr>
+<tr>
+<td lang=""><span><span>CPU插槽</span></span></td>
+<td lang=""><span><span>CPU插槽是插入中央處理器（計算機的大腦）的位置。</span></span></td>
+</tr>
+<tr class="e">
+<td lang=""><span><span>內存插槽</span></span></td>
+<td lang=""><span><span>這些插槽是在其中插入額外的隨機存取存儲器（RAM）以便為計算機提供容量的位置。</span></span></td>
+</tr>
+<tr>
+<td lang=""><span><span>24針主電源連接器</span></span></td>
+<td lang=""><span><span>這個24針主電源連接器為整個主板供電。</span></span></td>
+</tr>
+</tbody>
+</table>
+<p><br/><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" enablejsapi="1" frameborder="0" height="360" id="_i_4" src="https://www.youtube.com/embed/Q7A9z33Qj7M?enablejsapi=1&amp;rel=0&amp;vq=large" width="640"></iframe></p>
+<br />CH5 << <a href='CH5.html'>Previous</a> <a href='43頁英文版.html'>Next</a> >> 43頁英文版</div>
         
     <!-- footer -->
       <div class="container">

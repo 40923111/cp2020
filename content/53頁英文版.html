@@ -133,11 +133,159 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">W10 << <a href='W10.html'>Previous</a> <a href='test 試推.html'>Next</a> >> test 試推<br /><h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
-<br />W10 << <a href='W10.html'>Previous</a> <a href='test 試推.html'>Next</a> >> test 試推</div>
+    <div id="tipue_search_content">53頁中英文版 << <a href='53頁中英文版.html'>Previous</a> <a href='54頁中英版.html'>Next</a> >> 54頁中英版<br /><h1>53頁英文版</h1>
+<div class="activityhead">
+<div class="section" id="N1068F">
+<div class="sectionContain"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h4>Memory Module Width</h4>
+<p id="N10696" lang="">Memory module width is measured by the number of bits that can be transferred. Memory began in 8-bit varieties, but has increased to 16 bits, 32 bits, and now 64 bits in current systems. Memory must be added in banks to ensure the width equals the width of the memory bus. For example, if you need 64 bits and a single module offers 64 bits, then it will have one module in the bank. Dual-channel memory requires double the amount, therefore two 64-bit (128 bit) DIMMs are needed in the banks, while three are required for triple-channel, as was mentioned earlier.</p>
+<div class="image shouldbeleft"><img alt="Representation of 1byte      characters (numbers 1,2, and 3)in binary code." class="popimg" id="_i_0" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH06/webcontent/PCH06/image6.png" title="Representation of 1byte      characters (numbers 1,2, and 3)in binary code."/></div>
+</div>
+<div class="section" id="parity_and_ecc">
+<div class="sectionContain">
+<p id="N106A9" lang="">Parity is used to perform basic error checking and to ensure the memory contents are reliable. This memory is slower than non-parity, but adds the reliability needed for servers and certain desktop workstations.</p>
+<p id="N106AC" lang="">Parity checking is a rather simple method of detecting memory errors, without any correction capabilities. Parity is signified in a single bit of data that is added to the transmitted data string. If the module normally would have seven bits of data, an eighth is added as the parity bit. If the module normally would have eight chips for data, a ninth chip is added for parity.</p>
+<p id="N106AF" lang="">Every byte has a parity bit associated with it. In the case that seven bits make up the original data, there are eight total bits transmitted (seven original data bits plus one parity bit). In the case that eight bits make up the original data, a total of nine bits are transmitted (eight data bits plus one parity bit). The parity bit is set at write time, and then calculated and compared at read time to determine if any of the bits have changed since the data was stored. This type of checking is limited to detection of single bit errors. If two bits have been altered, the parity check will “pass,” and the error is allowed to possibly corrupt the data.</p>
+<p id="N106B2" lang="">Parity checking can be implemented either as “0” parity or “1” parity. When the byte is stored, the number of zeros (or ones, if “1” parity is selected) is added up. The result is stored in the parity bit – “1” if odd, “0” if even. When that byte is read from memory, the bits are again counted and the result is compared against what was stored in the parity bit. A match means that the data was not changed from when it was stored (or that two bits were altered in such a way that the result is the same).</p>
+<p id="N106B5" lang="">The process to determine the parity bit is the same, regardless of the number of original data bits transmitted. Typically, there are either seven or eight bits of original data.</p>
+<p id="N106B8" lang="">The parity bit is determined by counting the number of “1” bits in a data string.</p>
+<table align="center" cellspacing="0" class="wbtable" lang="">
+<thead>
+<tr>
+<th lang=""></th>
+<th align="center" colspan="2" lang="">Set parity bit to:</th>
+</tr>
+<tr>
+<th lang=""></th>
+<th lang="">Even parity</th>
+<th lang="">Odd parity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="e">
+<th lang="">Even number of “1” bits</th>
+<td align="center" lang="">0</td>
+<td align="center" lang="">1</td>
+</tr>
+<tr>
+<th lang="">Odd number of “1” bits</th>
+<td align="center" lang="">1</td>
+<td align="center" lang="">0</td>
+</tr>
+</tbody>
+</table>
+<div class="examplewrap">
+<div class="exHead"><span class="scnReader">EXAMPLE</span></div>
+<div class="example clearfix">
+<h5></h5>
+<div>
+<p id="N106F1" lang="">Eight bits of original data, 11110000, are transmitted using even parity. To determine the parity bit (the ninth bit of data), count the number of “1” bits in the data string. In this case, there are four “1” bits. Because the total number of “1” bits is four, the data is even. Therefore, the parity bit is set to 0.</p>
+<div class="image shouldbeleft"><img alt="Original data 11110000 with an additional ninth bit added on the end to represent a parity of 0" class="popimg" id="_i_1" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH06/webcontent/PCH06/image17.png" title="Original data 11110000 with an additional ninth bit added on the end to represent a parity of 0"/></div>
+</div>
+</div>
+</div>
+<div class="examplewrap">
+<div class="exHead"><span class="scnReader">EXAMPLE</span></div>
+<div class="example clearfix">
+<h5></h5>
+<div>
+<p id="N106FC" lang="">Seven bits of original data, 1000010, are transmitted using odd parity. To determine the parity bit (the eighth bit of data), count the number of “1” bits in the data string. In this case, there are two “1” bits. Therefore the parity bit is set to 1, because the total number of “1” bits (two) in the data is even, which does not match the odd parity of the transmission. Because of the mismatch in the number of “1” bits and the parity setting (odd), the parity bit must be set to 1. Because the total number of “1” bits is two, adding a parity bit of “1” to the string will result in an odd number of “1” bits (three) in the full eight-bit string (seven data bits plus one parity bit).</p>
+<div class="image shouldbeleft"><img alt="Original data 1000010 with an additional ninth bit added on the end to represent a parity of 1" class="popimg" id="_i_2" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH06/webcontent/PCH06/image18.png" title="Original data 1000010 with an additional ninth bit added on the end to represent a parity of 1"/></div>
+</div>
+</div>
+</div>
+<p id="N10705" lang="">Since about 90 percent of all<span> </span><a aria-describedby="N10709" class="extra" id=""></a>soft errors<span> </span>are of the single bit kind, parity checking is usually quite sufficient for most situations. Unfortunately, there is a penalty to be paid for error checking, which is slightly slower performance, since there are extra clock cycles spent in calculating, storing, and fetching the parity bit. One other consideration is that since the error cannot be fixed by parity, the application must actually be stopped and an error message issued indicating that a parity error was encountered.</p>
+<table class="table labeled" id="N10711_bx">
+<tfoot>
+<tr>
+<td class="captionwrap"><span class="caption" lang="">Original data (seven or eight bits) and the corresponding parity bit for even and odd parity.</span></td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td>
+<table align="center" cellspacing="0" class="wbtable" lang="">
+<thead>
+<tr>
+<th lang="">Original data</th>
+<th lang="">Count of “1” bits</th>
+<th colspan="2" lang="">Bits transmitted (8 or 9, depending on number of original bits), including parity</th>
+</tr>
+<tr>
+<th lang=""></th>
+<th lang=""></th>
+<th lang="">Even Parity</th>
+<th lang="">Odd Parity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="e">
+<td lang="">0000000</td>
+<td lang="">0</td>
+<td lang="">0000000<em class="bold" lang="">0</em></td>
+<td lang="">0000000<em class="bold" lang="">1</em></td>
+</tr>
+<tr>
+<td lang="">0101101</td>
+<td lang="">4</td>
+<td lang="">0101101<em class="bold" lang="">0</em></td>
+<td lang="">0101101<em class="bold" lang="">1</em></td>
+</tr>
+<tr class="e">
+<td lang="">0101010</td>
+<td lang="">3</td>
+<td lang="">0101010<em class="bold" lang="">1</em></td>
+<td lang="">0101010<em class="bold" lang="">0</em></td>
+</tr>
+<tr>
+<td lang="">10000000</td>
+<td lang="">1</td>
+<td lang="">1000000<em class="bold" lang="">1</em></td>
+<td lang="">10000000<em class="bold" lang="">0</em></td>
+</tr>
+<tr class="e">
+<td lang="">11111100</td>
+<td lang="">6</td>
+<td lang="">11111100<em class="bold" lang="">0</em></td>
+<td lang="">11111100<em class="bold" lang="">1</em></td>
+</tr>
+<tr>
+<td lang="">10001100</td>
+<td lang="">3</td>
+<td lang="">10001100<em class="bold" lang="">1</em></td>
+<td lang="">10001100<em class="bold" lang="">0</em></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div actguid="d87f2dec0a0001dc2eb08dff6eb5429d" class="asx" inlineparams="inlineClient=%2Fsuperactivity%2Fassessment2%2FInlineAssessmentClient.swf&amp;activityMode=delivery&amp;activityContextGUID=d87f2dec0a0001dc2eb08dff6eb5429d&amp;userGUID=40923111&amp;activityService=%2Fjcourse%2Fa2%2Frest&amp;webContentPath=%2Frepository%2Fwebcontent%2Fd826575d0a0001dc3e9f244fa018c560%2F&amp;logService=%2Flog%2Fserver&amp;">
+<div class="activitywrap purpose learnbydoing flash" id="dpch06_lbd04">
+<div class="activityhead"></div>
+</div>
+</div>
+<div actguid="d87f2de80a0001dc2459cd57dc75a254" class="asx" inlineparams="inlineClient=%2Fsuperactivity%2Fassessment2%2FInlineAssessmentClient.swf&amp;activityMode=delivery&amp;activityContextGUID=d87f2de80a0001dc2459cd57dc75a254&amp;userGUID=40923111&amp;activityService=%2Fjcourse%2Fa2%2Frest&amp;webContentPath=%2Frepository%2Fwebcontent%2Fd826575d0a0001dc3e9f244fa018c560%2F&amp;logService=%2Flog%2Fserver&amp;">
+<br />53頁中英文版 << <a href='53頁中英文版.html'>Previous</a> <a href='54頁中英版.html'>Next</a> >> 54頁中英版</div>
         
     <!-- footer -->
       <div class="container">

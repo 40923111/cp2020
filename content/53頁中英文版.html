@@ -133,11 +133,139 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">W10 << <a href='W10.html'>Previous</a> <a href='test 試推.html'>Next</a> >> test 試推<br /><h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
-<br />W10 << <a href='W10.html'>Previous</a> <a href='test 試推.html'>Next</a> >> test 試推</div>
+    <div id="tipue_search_content">51頁英文版 << <a href='51頁英文版.html'>Previous</a> <a href='53頁英文版.html'>Next</a> >> 53頁英文版<br /><h1>53頁中英文版</h1>
+<div class="section" id="N1068F">
+<div class="sectionContain">
+<p id="N10696" lang=""><span>內存模塊的寬度由可傳輸的位數決定。內存最初以8位形式出現，但在當前系統中已增加到16位，32位和現在的64位。必須以存儲體的形式添加內存，以確保其寬度等於內存總線的寬度。例如，如果您需要64位，而單個模塊提供64位，則庫中將只有一個模塊。如前所述，雙通道內存需要兩倍的存儲量，因此存儲庫中需要兩個64位（128位）DIMM，而三通道則需要三個。</span></p>
+<div class="image shouldbeleft"></div>
+</div>
+</div>
+<div class="section" id="parity_and_ecc">
+<div class="sectionContain">
+<p id="N106A9" lang=""><span><span>奇偶校驗用於執行基本的錯誤檢查並確保內存內容可靠。</span><span>此內存比非奇偶校驗慢，但增加了服務器和某些台式機工作站所需的可靠性。</span></span></p>
+<p id="N106AC" lang=""><span><span>奇偶校驗是一種檢測內存錯誤的相當簡單的方法，沒有任何校正功能。</span><span>奇偶校驗在添加到傳輸數據字符串的單個數據位中表示。</span><span>如果模塊通常具有七個數據位，則將八分之一添加為奇偶校驗位。</span><span>如果模塊通常有八個芯片用於數據，則添加第九個芯片以實現奇偶校驗。</span></span></p>
+<p id="N106AF" lang=""><span><span>每個字節都有一個與之關聯的奇偶校驗位。</span><span>在七位組成原始數據的情況下，總共傳輸了八位（七位原始數據位加一個奇偶校驗位）。</span><span>在八位組成原始數據的情況下，總共傳輸九位（八位數據位加一位奇偶校驗位）。</span><span>奇偶校驗位在寫入時設置，然後在讀取時進行計算和比較，以確定自存儲數據以來是否有任何位發生了更改。</span><span>這種類型的檢查僅限於檢測單個位錯誤。</span><span>如果更改了兩位，則奇偶校驗將“通過”，並且允許該錯誤可能破壞數據。</span></span></p>
+<p id="N106B2" lang=""><span><span>奇偶校驗可以實現為“ 0”奇偶校驗或“ 1”奇偶校驗。</span><span>存儲字節時，將加零（如果選擇了“ 1”奇偶校驗，則為零）的數目。</span><span>結果存儲在奇偶校驗位中-如果為奇數，則為“ 1”；如果為偶數，則為“ 0”。</span><span>當從內存中讀取該字節時，將再次對這些位進行計數，並將結果與奇偶校驗位中存儲的結果進行比較。</span><span>匹配表示數據從存儲時起就沒有改變（或以結果相同的方式更改了兩位）。</span></span></p>
+<p id="N106B5" lang=""><span><span>不管發送的原始數據位數如何，確定奇偶校驗位的過程都是相同的。</span><span>通常，原始數據有七位或八位。</span></span></p>
+<p id="N106B8" lang=""><span><span>奇偶校驗位是通過對數據字符串中“ 1”位的數量進行計數來確定的。</span></span></p>
+<table align="center" cellspacing="0" class="wbtable" lang="">
+<thead>
+<tr>
+<th lang=""></th>
+<th align="center" colspan="2" lang=""><span><span>將奇偶校驗位設置為：</span></span></th>
+</tr>
+<tr>
+<th lang=""></th>
+<th lang=""><span><span>平價</span></span></th>
+<th lang=""><span><span>奇數平價</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="e">
+<th lang=""><span><span>偶數個“ 1”位</span></span></th>
+<td align="center" lang=""><span><span>0</span></span></td>
+<td align="center" lang=""><span><span>1個</span></span></td>
+</tr>
+<tr>
+<th lang=""><span><span>奇數個“ 1”位</span></span></th>
+<td align="center" lang=""><span><span>1個</span></span></td>
+<td align="center" lang=""><span><span>0</span></span></td>
+</tr>
+</tbody>
+</table>
+<div class="examplewrap">
+<div class="exHead"><span class="scnReader"><span><span>例</span></span></span></div>
+<div class="example clearfix">
+<h5></h5>
+<div>
+<p id="N106F1" lang=""><span><span>使用偶校驗發送八位原始數據11110000。</span><span>要確定奇偶校驗位（數據的第9位），請計算數據字符串中“ 1”位的數量。</span><span>在這種情況下，有四個“ 1”位。</span><span>因為“ 1”位的總數是四，所以數據是偶數。</span><span>因此，奇偶校驗位設置為0。</span></span></p>
+<div class="image shouldbeleft"><img alt="原始數據11110000，末尾添加了第九個附加位，表示奇偶校驗為0" class="popimg" id="_i_1" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH06/webcontent/PCH06/image17.png" title="原始數據11110000，末尾添加了第九個附加位，表示奇偶校驗為0"/></div>
+</div>
+</div>
+</div>
+<div class="examplewrap">
+<div class="exHead"><span class="scnReader"><span><span>例</span></span></span></div>
+<div class="example clearfix">
+<h5></h5>
+<div>
+<p id="N106FC" lang=""><span><span>使用奇偶校驗傳輸七位原始數據1000010。</span><span>要確定奇偶校驗位（數據的第八位），請計算數據字符串中“ 1”位的數量。</span><span>在這種情況下，有兩個“ 1”位。</span><span>因此，將奇偶校驗位設置為1，因為數據中“ 1”位（兩個）的總數是偶數，這與傳輸的奇數奇偶校驗不匹配。</span><span>由於“ 1”位的數量和奇偶校驗設置（奇數）不匹配，因此必須將奇偶校驗位設置為1。由於“ 1”位的總數為2，因此將奇偶校驗位“ 1”添加到該字符串將在整個八位字符串（七個數據位加一個奇偶校驗位）中產生奇數個“ 1”位（三個）。</span></span></p>
+<div class="image shouldbeleft"><img alt="原始數據1000010，末尾添加了第九個奇偶校驗位" class="popimg" id="_i_2" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH06/webcontent/PCH06/image18.png" title="原始數據1000010，末尾添加了第九個奇偶校驗位"/></div>
+</div>
+</div>
+</div>
+<p id="N10705" lang=""><span><span>由於所有</span></span><a aria-describedby="N10709" class="extra" id=""></a><span><span>軟錯誤</span></span><span><span><span> </span>中</span><span>約有90％<span> </span></span><span>是單比特類型的，因此奇偶校驗通常在大多數情況下就足夠了。</span><span>不幸的是，由於要花費額外的時鐘週期來計算，存儲和獲取奇偶校驗位，因此錯誤檢查要付出一定的代價，這會稍微降低性能。</span><span>另一個考慮因素是，由於無法通過奇偶校驗解決錯誤，因此實際上必須停止應用程序，並發出一條錯誤消息，指出遇到奇偶校驗錯誤。</span></span></p>
+<table class="table labeled" id="N10711_bx">
+<tfoot>
+<tr>
+<td class="captionwrap"><span class="caption" lang=""><span><span>原始數據（七位或八位）以及相應的奇偶校驗位。</span></span></span></td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td>
+<table align="center" cellspacing="0" class="wbtable" lang="">
+<thead>
+<tr>
+<th lang=""><span><span>原始數據</span></span></th>
+<th lang=""><span><span>“ 1”位的計數</span></span></th>
+<th colspan="2" lang=""><span><span>傳輸的位（8位或9位，取決於原始位的數量），包括奇偶校驗</span></span></th>
+</tr>
+<tr>
+<th lang=""></th>
+<th lang=""></th>
+<th lang=""><span><span>平價</span></span></th>
+<th lang=""><span><span>奇校驗</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="e">
+<td lang=""><span><span>0000000</span></span></td>
+<td lang=""><span><span>0</span></span></td>
+<td lang=""><span><span>0000000<span> </span></span></span><em class="bold" lang=""><span><span>0</span></span></em></td>
+<td lang=""><span><span>0000000<span> </span></span></span><em class="bold" lang=""><span><span>1</span></span></em></td>
+</tr>
+<tr>
+<td lang=""><span><span>0101101</span></span></td>
+<td lang=""><span><span>4</span></span></td>
+<td lang=""><span><span>0101101<span> </span></span></span><em class="bold" lang=""><span><span>0</span></span></em></td>
+<td lang=""><span><span>0101101<span> </span></span></span><em class="bold" lang=""><span><span>1</span></span></em></td>
+</tr>
+<tr class="e">
+<td lang=""><span><span>0101010</span></span></td>
+<td lang=""><span><span>3</span></span></td>
+<td lang=""><span><span>0101010<span> </span></span></span><em class="bold" lang=""><span><span>1</span></span></em></td>
+<td lang=""><span><span>0101010<span> </span></span></span><em class="bold" lang=""><span><span>0</span></span></em></td>
+</tr>
+<tr>
+<td lang=""><span><span>10000000</span></span></td>
+<td lang=""><span><span>1個</span></span></td>
+<td lang=""><span><span>1000000<span> </span></span></span><em class="bold" lang=""><span><span>1</span></span></em></td>
+<td lang=""><span><span>10000000<span> </span></span></span><em class="bold" lang=""><span><span>0</span></span></em></td>
+</tr>
+<tr class="e">
+<td lang=""><span><span>11111100</span></span></td>
+<td lang=""><span><span>6</span></span></td>
+<td lang=""><span><span>11111100<span> </span></span></span><em class="bold" lang=""><span><span>0</span></span></em></td>
+<td lang=""><span><span>11111100<span> </span></span></span><em class="bold" lang=""><span><span>1</span></span></em></td>
+</tr>
+<tr>
+<td lang=""><span><span>10001100</span></span></td>
+<td lang=""><span><span>3</span></span></td>
+<td lang=""><span><span>10001100<span> </span></span></span><em class="bold" lang=""><span><span>1</span></span></em></td>
+<td lang=""><span><span>10001100<span> </span></span></span><em class="bold" lang=""><span><span>0</span></span></em></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div actguid="d87f2ded0a0001dc588f7e25e5e2fac4" class="asx" inlineparams="inlineClient=%2Fsuperactivity%2Fassessment2%2FInlineAssessmentClient.swf&amp;activityMode=delivery&amp;activityContextGUID=d87f2ded0a0001dc588f7e25e5e2fac4&amp;userGUID=40923111&amp;activityService=%2Fjcourse%2Fa2%2Frest&amp;webContentPath=%2Frepository%2Fwebcontent%2Fd826575d0a0001dc3e9f244fa018c560%2F&amp;logService=%2Flog%2Fserver&amp;">
+<div class="activitywrap purpose didigetthis flash" id="dpch06_digt01">
+<div class="activityhead"></div>
+<br />51頁英文版 << <a href='51頁英文版.html'>Previous</a> <a href='53頁英文版.html'>Next</a> >> 53頁英文版</div>
         
     <!-- footer -->
       <div class="container">
