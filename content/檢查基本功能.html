@@ -133,8 +133,76 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW1 << <a href='HW1.html'>Previous</a> <a href='43頁 中英文版.html'>Next</a> >> 43頁 中英文版<br /><h1>CH5</h1>
-<br />HW1 << <a href='HW1.html'>Previous</a> <a href='43頁 中英文版.html'>Next</a> >> 43頁 中英文版</div>
+    <div id="tipue_search_content">check primality functions << <a href='check primality functions.html'>Previous</a> <a href='回顧.html'>Next</a> >> 回顧<br /><h1>檢查基本功能</h1>
+<span></span><span><span>練習11（和</span></span><a href="https://www.practicepython.org/solution/2014/04/16/11-check-primality-functions-solutions.html"><span><span>解決方案</span></span></a><span><span>）</span></span>
+<p><span><span>向用戶詢問一個數字，並確定該數字是否為質數。</span><span>（對於那些忘記的人，質數是沒有除數的數。）</span><span>您可以（並且應該！）使用</span></span><a href="https://www.practicepython.org/exercise/2014/02/26/04-divisors.html"><span><span>練習4</span></span></a><span><span>的答案</span><span>來幫助您。</span><span>藉此機會練習使用如下所述的功能。</span></span></p>
+<span><span>討論區</span></span>
+<p><span><span>本週的概念：</span></span></p>
+<ul>
+<li><span><span>職能</span></span></li>
+<li><span><span>可重用功能</span></span></li>
+<li><span><span>默認參數</span></span></li>
+</ul>
+<span><span>職能</span></span>
+<p><span><span>編程提供給我們的工具之一是能夠將問題分解為更簡單（或可能先前解決）或可重用的子問題。</span><span>優良作法是使一個函數具有單一目的，並且該函數的名稱應以某種方式暗示其目的。</span></span></p>
+<p><span><span>大多數編程語言都具有函數，子例程或子程序的概念。</span><span>在Python中，函數是一種允許這樣做的編程構造。</span></span></p>
+<p><span><span>讓我們看一個簡單的例子：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">def</span> <span class="nf">get_integer</span><span class="p">():</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Give me a number: "</span><span class="p">))</span></code></pre>
+</figure>
+<p><span><span>在這個小示例中，我們使用了相同的代碼來要求用戶輸入此</span></span><code class="highlighter-rouge">def</code><span><span>語句</span><span>下方的選項卡行</span><span>。</span><span>的</span></span><code class="highlighter-rouge">def</code><span><span>手段，一切選項卡式下面是一個函數。</span><span>這個名字</span></span><code class="highlighter-rouge">get_integer()</code><span><span>只是我（程序員）組成的名字。</span><span>如果我只是將此代碼包含在Python文件中並運行它，則將不會發生任何事情-到目前為止，我所做的一切都將我的代碼包裝在一個函數中；</span><span>我從未告訴過我的程序實際運行我的功能。</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">def</span> <span class="nf">get_integer</span><span class="p">():</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Give me a number: "</span><span class="p">))</span><span></span>
+<span></span>
+  <span class="n">age</span> <span class="o">=</span> <span class="n">get_integer</span><span class="p">()</span>
+  <span class="n">school_year</span> <span class="o">=</span> <span class="n">get_integer</span><span class="p">()</span>
+  <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"You are over the age of 15"</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"You are in grade "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">school_year</span><span class="p">))</span></code></pre>
+</figure>
+<p><span><span>我在這裡所做的事情</span><span>通過編寫</span></span><em><span><span>稱為</span></span></em><span><span>函數（告訴它運行）</span></span><code class="highlighter-rouge">age = get_integer()</code><span><span>。</span><span>當這行代碼運行時，程序將</span><span>通過詢問我一個數字</span><span>來</span></span><em><span><span>執行</span></span></em><span><span>（運行）該函數，然後</span></span><em><span><span>將</span></span></em><span><span>其保存在變量中以將其</span><em><span>返回</span></em><span>（返還給我）</span></span><code class="highlighter-rouge">age</code><span><span>。</span><span>現在，當我想問用戶另一個數字（這次代表學年）時，我對變量做了同樣的事情</span></span><code class="highlighter-rouge">school_year</code><span><span>。</span></span></p>
+<span><span>可重用功能</span></span>
+<p><span><span>這一切都很好，但是我可以讓我的功能為我做更多的事情。</span><span>現在，我的函數將始終通過打印字符串向用戶詢問一個數字</span></span><code class="highlighter-rouge">"Give me a number: "</code><span><span>。</span><span>如果我想每次問用戶一個數字時都想打印一個不同的字符串，但對於該函數使用相同的想法怎麼辦？</span><span>換句話說，我希望函數中的變量參數在每次調用函數時都根據我（程序員）希望與眾不同的事物而改變。</span></span></p>
+<p><span><span>我可以通過</span></span><em><span><span>傳遞</span></span></em><span><span>（給我的）函數一個變量</span><span>來做到這一點</span><span>。</span><span>像這樣：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">def</span> <span class="nf">get_integer</span><span class="p">(</span><span class="n">help_text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">help_text</span><span class="p">))</span></code></pre>
+</figure>
+<p><span><span>現在，我在調用該函數時可以執行的操作如下：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">def</span> <span class="nf">get_integer</span><span class="p">(</span><span class="n">help_text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">help_text</span><span class="p">))</span><span></span>
+<span></span>
+  <span class="n">age</span> <span class="o">=</span> <span class="n">get_integer</span><span class="p">(</span><span class="s">"Tell me your age: "</span><span class="p">)</span>
+  <span class="n">school_year</span> <span class="o">=</span> <span class="n">get_integer</span><span class="p">(</span><span class="s">"What grade are you in? "</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"You are over the age of 15"</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"You are in grade "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">school_year</span><span class="p">))</span></code></pre>
+</figure>
+<p><span><span>現在，由於幫助文本不同，因此使用戶更容易使用該程序。</span></span></p>
+<p><span><span>傳遞給函數的這些變量稱為</span></span><em><span><span>變量</span></span></em><span><span>，</span></span><em><span><span>參數</span></span></em><span><span>或</span></span><em><span><span>參數</span></span></em><span><span>。</span></span></p>
+<span><span>默認參數</span></span>
+<p><span><span>在上面的示例中，在</span><span>向函數</span><span>添加</span></span><em><span><span>參數後</span></span></em><span><span>，在調用函數時始終必須提供參數。</span><span>我不能忘記</span></span><code class="highlighter-rouge">get_integer()</code><span><span>從字符串上方</span><span>給</span><span>函數打印到屏幕上。</span><span>在某些情況下，我希望函數有一種“默認”行為，這種行為會在為它創建參數但不給出任何參數時發生。</span></span></p>
+<p><span><span>在上面的示例中，如果我不提供自定義字符串（可能占我使用此函數的時間的95％），我只想讓</span></span><code class="highlighter-rouge">input()</code><span><span>行說出來，</span></span><code class="highlighter-rouge">"Give me a number: "</code><span><span>並且省去了每次編寫此</span><span>字符串</span><span>的麻煩我稱這個功能。</span><span>所以我能做的就是給我的函數</span></span><em><span><span>默認參數</span></span></em><span><span>。</span><span>像這樣：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">def</span> <span class="nf">get_integer</span><span class="p">(</span><span class="n">help_text</span><span class="o">=</span><span class="s">"Give me a number: "</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">help_text</span><span class="p">))</span></code></pre>
+</figure>
+<p><span><span>現在發生的事情是我可以通過兩種方式使用該函數：通過給它一個參數和不給它一個參數。</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">def</span> <span class="nf">get_integer</span><span class="p">(</span><span class="n">help_text</span><span class="o">=</span><span class="s">"Give me a number: "</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">help_text</span><span class="p">))</span><span></span>
+<span></span>
+  <span class="n">age</span> <span class="o">=</span> <span class="n">get_integer</span><span class="p">(</span><span class="s">"Tell me your age: "</span><span class="p">)</span>
+  <span class="n">school_year</span> <span class="o">=</span> <span class="n">get_integer</span><span class="p">()</span>
+  <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"You are over the age of 15"</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"You are in grade "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">school_year</span><span class="p">))</span></code></pre>
+</figure>
+<p><span><span>第一次調用該函數，它將打印</span></span><code class="highlighter-rouge">"Tell me your age: "</code><span><span>，但是第二次，它將打印</span></span><code class="highlighter-rouge">"Give me a number: "</code><span><span>，因為我沒有給它一個字符串，它將執行默認行為。</span></span></p>
+<br />check primality functions << <a href='check primality functions.html'>Previous</a> <a href='回顧.html'>Next</a> >> 回顧</div>
         
     <!-- footer -->
       <div class="container">
